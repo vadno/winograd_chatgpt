@@ -1,6 +1,6 @@
 # Resolving Hungarian Anaphora with ChatGPT
 
-## The Experiment
+## The Experiment (First Round)
 
 This is an experiment in which we investigated how ChatGPT performs in resolving ambiguous pronominal anaphoras in Hungarian sentences.
 
@@ -27,9 +27,9 @@ The answers of ChatGPT have been manually sorted into the following categories:
 
 The number of answers classified into the four categories were totalled, then we examined how the number of answers falling into each category developed in the four experiments. We interpreted the results using the experience we gained in the fourth experiment.
 
-## Categorizing the Answers
+### Categorizing the Answers
 
-The [table](winograd_chatgpt.csv) consists of the following columns:
+Table [winograd_chatgpt.csv](winograd_chatgpt.csv) consists of the following columns:
 * A: the sentence
 * B: the question
 * C: answer options
@@ -54,18 +54,48 @@ The [table](winograd_chatgpt.csv) consists of the following columns:
 
 Keep in mind that the table contains my own subjective judgments.
 
-## Results
+### Results
 
-The results can be seen for each experiment in the [table](winograd_chatgpt.csv) in rows 572-575.
+The results can be seen for each experiment in the table [winograd_chatgpt.csv](winograd_chatgpt.csv) in rows 572-575.
 
 |             | first experiment | second experiment | third experiment | fourth experiment |
 |------------:|-----------------:|------------------:|-----------------:|------------------:|
 |     correct |           66.37% |            70.62% |           79.29% |            74.69% |
-| did'nt know |           11.86% |             2.48% |            3.89% |             4.42% |
+| didn't know |           11.86% |             2.48% |            3.89% |             4.42% |
 |   incorrect |           15.75% |            24.01% |           13.45% |            16.64% |
 |     general |            5.84% |             2.65% |            3.19% |             4.07% |
 
 Row 577-578 contains the sums of columns M-U. M:577-578 counts the cases when ChatGPT gave correct answer in at least two experiments.
+
+## Evaluating Consistency (Second Round)
+
+We repeated the test with a few sentences from the first round.
+The second round was carried out in August 2023.
+The same API and modell were used as in the first round.
+
+For the second round we selected those sentences for which zero, one or two correct answers were obtained during the four experiments in the first round.
+We asked ChatGPT ten times each question and saw how consistent the answers were.
+We created 1650 questions from the 165 schemes.
+The questions were asked together with the two answer options (as in the third experiment of the first round).
+The results are shown in table [winograd_chatgpt_cons.csv](winograd_chatgpt_cons.csv).
+
+In this round, we set up three categories to classify the answers (the letters in the table are shown in brackets):
+* correct answer (j)
+* incorrect answer (r)
+* didn't answer / didn't know (n)
+
+### Results
+
+It is considered a fully consistent response if we received answers to the same category in all ten times.
+It is considered a mostly consistent response if at least eight answers to the given question fall into the same category.
+
+|             | fully consistent | mostly consistent |
+|------------:|-----------------:|------------------:|
+|     correct |           22.42% |            35.76% |
+|   incorrect |           14.55% |            27.27% |
+| didn't know |            4.24% |             7.88% |
+|       TOTAL |           41.21% |            70.91% |
+
 
 # References
 If you use my results, please refer to:
