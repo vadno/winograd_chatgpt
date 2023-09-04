@@ -103,11 +103,20 @@ If you use my results, please refer to:
 Noémi Vadász (2023): Resolving Hungarian Anaphora with ChatGPT. TSD 2023 (In press).
 
 ```bibtex
-@InProceedings{vadasz2023,
-  author       = "Noémi Vadász",
-  title        = "Resolving Hungarian Anaphora with ChatGPT",
-  year         = "2023",
-  note         = "In press",
+@InProceedings{10.1007/978-3-031-40498-6_5,
+	author="Vad{\'a}sz, No{\'e}mi",
+	editor="Ek{\v{s}}tein, Kamil
+	and P{\'a}rtl, Franti{\v{s}}ek
+	and Konop{\'i}k, Miloslav",
+	title="Resolving Hungarian Anaphora with ChatGPT",
+	booktitle="Text, Speech, and Dialogue",
+	year="2023",
+	publisher="Springer Nature Switzerland",
+	address="Cham",
+	pages="45--57",
+	isbn="978-3-031-40498-6"
+}
+
 }
 ```
 
